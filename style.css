@@ -1,0 +1,459 @@
+:root {
+    --primary-color: #8BAFBE;
+    --secondary-color: #A6C5D0;
+    --tertiary-color: #7299A9;
+    --dark-color: #527789;
+    --light-color: #E2EDF1;
+    --font-color: #263238;
+}
+
+* {
+    box-sizing: border-box; /*makes it so ovrelap of different backgrounds don't get lost on the edges*/
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+}
+
+#menu a {
+    color:black;
+    text-decoration: none;
+    margin-right: 40px;
+}
+#menu {
+    position: fixed;
+    width: 100%;
+    text-align: end;
+    justify-content: flex-end;
+    background-color: var(--tertiary-color);
+    padding: 10px;
+}
+
+#hamburgerMenu{
+        display: none;
+        margin-right: 20px;
+}
+
+.container{
+    padding-top: 40px;
+    height: auto;
+    display:grid;
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--secondary-color);
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    /* gap: 0.5rem; */
+
+    grid-template-areas:
+
+    "profile aboutMe"
+    "papers papers"
+    "hobbies hobbies"
+    "blogs blogs"
+    "images images"
+    "footer footer"
+}
+
+#profile {
+    background-color: var(--primary-color);
+    grid-area: profile;
+    height: auto;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+#profile img{
+    display: block;
+    height: 35vw;
+    min-height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#profile p {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 3vh;
+}
+#profile figcaption{
+    font-size: 2.5vh;
+}
+
+#aboutMe {
+    background-color: var(--primary-color);
+    grid-area: aboutMe;
+    height: auto;
+    padding: 10px;
+    width: 100%;
+}
+#aboutMe li {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2vw;
+    color: var(--font-color);
+    padding-bottom: 15px;
+}
+#aboutMe h1 {
+            text-align: center;
+            font-size: 4vw;
+    }
+
+#papers {
+    grid-area: papers;
+    padding: 10px;
+}
+
+#papers h1{
+    text-align: center;
+}
+
+#paperContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    gap: 10px;
+    padding: 10px;
+    
+}
+
+.paper {
+    background-color: var(--light-color);
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--dark-color);
+    color: var(--font-color);
+    display: flex;
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    grid-auto-rows: auto;
+}
+
+.paperIcon {
+    font-size: 10vh;
+    display: flex;
+    line-height: .1;
+}
+
+.paperTitle {
+    color: var(--font-color);
+    font-size: 2vh;
+}
+
+.paperYear {
+    color: var(--font-color);
+    font-size: 1.5vh;
+}
+
+.paperPublished {
+    color: var(--font-color);
+    font-size: 1.5vh;
+}
+
+#hobbies {
+    background-color: var(--primary-color);
+    grid-area: hobbies;
+    padding: 10px;
+}
+
+#hobbies h1{
+    text-align: center;
+}
+
+#hobbyContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+}
+
+.hobby {
+    background-color: var(--light-color);
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--dark-color);
+    color: var(--font-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto auto;
+    font-size: 3vw;
+}
+
+.contentImage img{
+    height: 20vw;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.contentImageWide img{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contentImage {
+    font-size: 1.5vw;
+}
+
+#blogs {
+    grid-area: blogs;
+    padding: 10px;
+}
+
+#blogs h1{
+    text-align: center;
+}
+
+#blogContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+    gap: 10px;
+    padding: 10px;
+}
+
+.blog {
+    background-color: var(--light-color);
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--dark-color);
+    color: var(--font-color);
+}
+
+
+#images {
+    background-color: var(--primary-color);
+    grid-area: images;
+    padding: 10px;
+}
+
+#images h1{
+    text-align: center;
+}
+
+#imageContainer {
+    width: 100%;
+    gap: 10px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+}
+
+.image {
+    background-color: var(--light-color);
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--dark-color);
+    color: var(--font-color);
+    display: flex;
+    width: auto;
+}
+
+.einsteinImage {
+    font-size: 1.75vw;
+}
+
+.einsteinImage img {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#footer{
+    grid-area: footer;
+    background-color: var(--tertiary-color);
+    align-content: center;
+    text-align: center;
+}
+
+#footerSocials{
+    background-color: var(--tertiary-color);
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+ .linkImage{
+    width: 10vw;
+    height: auto;
+    object-fit: contain;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2vw;
+ }
+
+@media (max-width: 768px) {
+    #hamburgerMenu{
+        display: inline;
+    }
+
+    .navLinks { 
+        display: none;
+        padding: 10px;
+    }
+
+    .navLinks.open {
+         display: block; 
+    }
+
+    .container{
+    padding-top: 40px;
+    height: auto;
+    display:grid;
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--secondary-color);
+
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    /* gap: 0.5rem; */
+
+    grid-template-areas:
+
+    "profile"
+    "aboutMe"
+    "papers"
+    "hobbies"
+    "blogs"
+    "images"
+    "footer"
+}
+
+#paperContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: 10px;
+    padding: 10px;
+}
+
+#hobbyContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: 10px;
+    padding: 10px;
+}
+
+#blogContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: 10px;
+    padding: 10px;
+}
+
+#imageContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: 10px;
+    padding: 10px;
+}
+
+.einsteinImage {
+    font-size: 4vw;
+}
+
+.contentImage {
+    font-size: 3vw;
+}
+
+#aboutMe li {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 4vw;
+    color: var(--font-color);
+    padding-bottom: 15px;
+}
+
+.contentImage img{
+    height: 45vw;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.hobby {
+    background-color: var(--light-color);
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--dark-color);
+    color: var(--font-color);
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-auto-rows: auto auto;
+    font-size: 5vw;
+}
+
+#profile img{
+    display: block;
+    height: 50vw;
+    min-height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#profile figcaption{
+    font-size: 3vh;
+}
+
+
+.paperIcon {
+    font-size: 10vh;
+    display: flex;
+    line-height: 1;
+}
+
+.paperTitle {
+    color: var(--font-color);
+    font-size: 3vh;
+}
+
+.paperYear {
+    color: var(--font-color);
+    font-size: 2.5vh;
+}
+
+.paperPublished {
+    color: var(--font-color);
+    font-size: 2.5vh;
+}
+
+.blog figcaption {
+    font-size: 5vw;
+}
+
+ .linkImage{
+    width: 20vw;
+    height: auto;
+    object-fit: contain;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2vw;
+ }
+}
