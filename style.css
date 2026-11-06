@@ -29,6 +29,7 @@ html, body {
     justify-content: flex-end;
     background-color: var(--tertiary-color);
     padding: 10px;
+    font-size: 3vh;
 }
 
 #hamburgerMenu{
@@ -184,9 +185,9 @@ html, body {
     border: 2px solid var(--dark-color);
     color: var(--font-color);
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.2fr;
     grid-auto-rows: auto auto;
-    font-size: 3vw;
+    font-size: 2vw;
 }
 
 .contentImage img{
@@ -199,7 +200,7 @@ html, body {
 .contentImageWide img{
     width: 100%;
     margin-left: auto;
-    margin-right: auto;
+    /* margin-right: auto; */
 }
 
 .contentImage {
@@ -279,9 +280,24 @@ html, body {
     background-color: var(--tertiary-color);
     align-content: center;
     text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+
+    grid-template-areas: 
+    "info links"
+    ;
+}
+
+#footer p{
+    grid-area: info;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 1.75vw;
 }
 
 #footerSocials{
+    grid-area: links;
     background-color: var(--tertiary-color);
     display: flex;
     width: 100%;
@@ -290,7 +306,7 @@ html, body {
 }
 
  .linkImage{
-    width: 10vw;
+    width: 8vw;
     height: auto;
     object-fit: contain;
     display: flex;
@@ -404,9 +420,9 @@ html, body {
     border: 2px solid var(--dark-color);
     color: var(--font-color);
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1.5fr 1.3fr;
     grid-auto-rows: auto auto;
-    font-size: 5vw;
+    font-size: 4vw;
 }
 
 #profile img{
@@ -456,4 +472,24 @@ html, body {
     margin-right: auto;
     padding: 2vw;
  }
+
+  #footer{
+    grid-area: footer;
+    background-color: var(--tertiary-color);
+    align-content: center;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+
+    "links"
+    "info"
+}
+
+#footer p{
+    margin: 10px;
+    grid-area: info;
+    font-size: 3vw;
+}
 }
